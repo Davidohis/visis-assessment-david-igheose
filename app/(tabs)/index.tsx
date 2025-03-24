@@ -22,7 +22,7 @@ import { API_KEY, BOOK_BASE_URL, OCR_BASE_URL } from "@env";
 
 export default function HomeScreen() {
   const [image, setImage] = useState("");
-  const [bookDetails, setBookDetails] = useState<BookDetails>({
+  const [bookDetails, setBookDetails] = useState({
     title: "",
     authors: "",
     description: "",
@@ -97,6 +97,7 @@ export default function HomeScreen() {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
+      console.log("ocrResponse", ocrResponse);
       if (
         ocrResponse.data.ParsedResults &&
         ocrResponse.data.ParsedResults.length > 0
@@ -202,25 +203,25 @@ export default function HomeScreen() {
         {error && <Text style={homeStyles.error}>{error}</Text>}
         {bookDetails && (
           <View style={homeStyles.bookDetails}>
-            {bookDetails.coverUrl ? (
+            {bookDetails.coverUrl && (
               <Image
                 source={{
                   uri: `${bookDetails.coverUrl}`,
                 }}
                 style={homeStyles.thumbnail}
               />
-            ) : (
-              <Text style={homeStyles.description}>
-                Cover Image: Not Available
-              </Text>
             )}
             <Text style={homeStyles.title}>{bookDetails.title}</Text>
-            <Text style={homeStyles.author}>
-              By: {bookDetails.authors ?? "N/A"}
-            </Text>
-            <Text style={homeStyles.author}>
-              First Published: {bookDetails.firstPublishYear || "Unknown"}
-            </Text>
+            {bookDetails.authors && (
+              <Text style={homeStyles.author}>
+                By: {bookDetails.authors ?? "N/A"}
+              </Text>
+            )}
+            {bookDetails.firstPublishYear && (
+              <Text style={homeStyles.author}>
+                First Published: {bookDetails.firstPublishYear || "Unknown"}
+              </Text>
+            )}
             <Text style={homeStyles.description}>
               {bookDetails.description}
             </Text>

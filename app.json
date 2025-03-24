@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.davidigheose.visisapp"
     },
     "web": {
       "bundler": "metro",
@@ -32,20 +33,18 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ],
-      [
-        "module:react-native-dotenv",
-        {
-          "envName": ".env",
-          "moduleName": "@env",
-          "path": ".env",
-          "safe": false,
-          "allowUndefined": true
-        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "16d42252-fa55-4e50-af1c-a959aa2e8fd5"
+      }
     }
   }
 }

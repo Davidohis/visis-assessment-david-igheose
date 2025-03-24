@@ -29,8 +29,8 @@ The app integrates with external APIs to fetch and display data. It includes err
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone git@github.com:Davidohis/visis-assessment-david-igheose.git
+   cd visis-assessment-david-igheose
    ```
 
 2. **Install dependencies**
@@ -44,8 +44,10 @@ The app integrates with external APIs to fetch and display data. It includes err
    ```bash
    npx expo start
    ```
+4. **Node Version**
+  v18.20.5
 
-4. **Open the app**
+5. **Open the app**
 
    Follow the instructions in the terminal to open the app on an emulator, simulator, or physical device.
 

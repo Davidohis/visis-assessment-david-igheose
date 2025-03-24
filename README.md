@@ -1,50 +1,52 @@
-# Welcome to your Expo app 👋
+## Frontend Directories
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+The frontend of this app is organized into several directories, each serving a specific purpose. Below is a detailed documentation of these directories:
 
-## Get started
+### `components`
 
-1. Install dependencies
+This directory contains reusable UI components used throughout the app. Each component is designed to be modular and easy to integrate.
+
+### `screens`
+
+This directory includes all the screen components that represent different views or pages in the app. Each screen component is typically associated with a route in the navigation configuration.
+
+### `navigation`
+
+This directory holds the navigation configuration for the app, including the stack, tab, and drawer navigators. It defines how users can move between different screens.
+
+### `assets`
+
+This directory contains static assets such as images, fonts, and icons used in the app.
+
+### `styles`
+
+This directory includes global styles and theme configurations that are used across the app to maintain a consistent look and feel.
+
+### API Integration
+
+The app integrates with external APIs to fetch and display data. It includes error handling and loading states to enhance the user experience.
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
+
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Start the development server**
 
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Open the app**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   Follow the instructions in the terminal to open the app on an emulator, simulator, or physical device.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+By following these steps, you will have a fully functional development environment set up for the app.

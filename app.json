@@ -32,6 +32,16 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "module:react-native-dotenv",
+        {
+          "envName": ".env",
+          "moduleName": "@env",
+          "path": ".env",
+          "safe": false,
+          "allowUndefined": true
+        }
       ]
     ],
     "experiments": {
